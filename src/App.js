@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import PotionList from './PotionList';
 
 class App extends Component {
 
@@ -12,12 +13,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Main/>
+        <main><PotionList/></main>
+        
+
+        
         <Footer/>
-
-        <img src={logo} className="temp-images" alt="react logo" />
-        <img src="acl-logo.png" className="temp-images" alt="acl logo" />
-
       </div>
     );
   }
