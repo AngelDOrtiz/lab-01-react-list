@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import PotionList from './PotionList';
+import potions from './potions.js';
 
 class App extends Component {
 
@@ -11,7 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <main><PotionList/></main>
+        <main>
+          <PotionList potions={potions}/>
+        </main>
         
 
         
