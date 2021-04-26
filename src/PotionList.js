@@ -6,8 +6,16 @@ import './PotionList.css';
 class PotionList extends Component {
 
   render() {
+    
+    const potions = this.props.potions;
+    
     return (
-      <ul className='PotionList'><PotionItem/></ul>
+      <ul className='PotionList'>
+        {potions.map(potion => (
+          <PotionItem key={potion.name} potionProp={potion}/>
+        ))}
+        
+      </ul>
     );
   }
 }
