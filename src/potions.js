@@ -6,6 +6,12 @@ const potions = [
     url: 'https://www.pngitem.com/pimgs/m/87-879825_tww-red-potion-artwork-zelda-red-potion-hd.png'
   },
   {
+    name: 'Truth Potion',
+    color: 'purple',
+    price: '12',
+    url: 'https://elements-cover-images-0.imgix.net/d60b26dc-a63a-49a1-bd60-ffe8e144627b?auto=compress%2Cformat&fit=max&w=632&s=145634af27af0fe65bf812c9f2f0e41e'
+  },
+  {
     name: 'Invisibility Potion',
     color: 'clear',
     price: '10',
@@ -18,15 +24,9 @@ const potions = [
     url: 'https://cdn.dribbble.com/users/339076/screenshots/2791951/potionbottledribbble-01.jpg'
   },
   {
-    name: 'Truth Potion',
-    color: 'purple',
-    price: '12',
-    url: 'https://elements-cover-images-0.imgix.net/d60b26dc-a63a-49a1-bd60-ffe8e144627b?auto=compress%2Cformat&fit=max&w=632&s=145634af27af0fe65bf812c9f2f0e41e'
-  },
-  {
     name: 'Waterwalking Potion',
     color: 'blue',
-    price: '15',
+    price: '7',
     url: 'https://images.saymedia-content.com/.image/t_share/MTc0NDU3ODkwMjM5ODgyNjAw/best-zelda-potions.png'
   },
 ];
