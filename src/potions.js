@@ -14,7 +14,7 @@ const potions = [
   {
     name: 'Stoneskin Potion',
     color: 'gray',
-    price: '9',
+    price: '10',
     url: 'https://cdn.dribbble.com/users/339076/screenshots/2791951/potionbottledribbble-01.jpg'
   },
   {
