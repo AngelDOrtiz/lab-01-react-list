@@ -2,24 +2,44 @@ import React, { Component } from 'react';
 import './PotionSearch.css';
 
 class PotionSearch extends Component {
-    
-  render() {
+    state = {
+      nameFilter: '',
+      sortField: '',
+    }
 
-    return (
-      <form className="PotionSearch">
+    handleNameFilter = ({ target }) => {
+      this.setState({ nameFilter: target.value });
+    }
+    
+    handleSortField = ({ target }) => {
+      this.setState({ sortField: target.value });
+    }
+
+    handleSubmit = (e) => {
+      e.preventDefault();
+      this.props.onSearch(this.state);
+      console.log(this.state);
+    }
+    
+    render() {
+      const { nameFilter, sortField } = this.state;
         
-        <input type="text"></input>
-        <select name="sort">
-          <option value="all">All</option>
-          <option value="name">Name</option>
-          <option value="price">Price</option>
-        </select>
+
+      return (
+        <form className="PotionSearch">
         
-        <button>Search</button>
+          <input type="text" name="nameFilter" value={nameFilter} onChange={this.handleNameFilter}></input>
+          <select name="sortField" value={sortField} onChange={this.handleSortField}>
+            <option value="all">All</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+          </select>
+        
+          <button>Search</button>
       
-      </form>
-    );
-  }
+        </form>
+      );
+    }
 }
 
 export default PotionSearch;
