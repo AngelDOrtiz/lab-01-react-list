@@ -9,16 +9,24 @@ class PotionSearch extends Component {
 
     handleNameFilter = ({ target }) => {
       this.setState({ nameFilter: target.value });
+      
     }
     
     handleSortField = ({ target }) => {
       this.setState({ sortField: target.value });
+     
     }
 
     handleSubmit = (e) => {
       e.preventDefault();
       this.props.onSearch(this.state);
-      console.log(this.state);
+      
+    }
+
+    componentDidUpdate(prevProp, prevState) {
+      if (prevState !== this.state) {
+        this.props.onSearch(this.state);
+      }
     }
     
     render() {
@@ -26,11 +34,11 @@ class PotionSearch extends Component {
         
 
       return (
-        <form className="PotionSearch">
+        <form className="PotionSearch" onSubmit={this.handleSubmit}>
         
-          <input type="text" name="nameFilter" value={nameFilter} onChange={this.handleNameFilter}></input>
+          <input name="nameFilter" value={nameFilter} onChange={this.handleNameFilter}></input>
           <select name="sortField" value={sortField} onChange={this.handleSortField}>
-            <option value="all">All</option>
+            <option value="">All</option>
             <option value="name">Name</option>
             <option value="price">Price</option>
           </select>

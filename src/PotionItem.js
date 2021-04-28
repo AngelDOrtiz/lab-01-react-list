@@ -12,6 +12,7 @@ class PotionItem extends Component {
       <li className="PotionItem">
         <h2>{potion.name}</h2>
         <img alt={potion.name} src={potion.url}/>
+        <p>{potion.price}gold</p>
       </li>
     );
   }
