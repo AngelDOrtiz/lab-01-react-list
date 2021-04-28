@@ -1,0 +1,11 @@
+.PotionSearch {
+    background-color: skyblue;
+    border: solid 5px salmon;
+    display: flex;
+    height: 30px;
+    
+}
+
+input[type="radio"] {
+    align-content: space-evenly;
+}
